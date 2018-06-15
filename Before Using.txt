@@ -1,0 +1,17 @@
+Welcome to Event Manager
+I'm sending a Maven project. I'm using Spring with Hibernate. I'm sending only the "src" file so you can easily import it.
+Before you "Run" the program, you should have working MySql server. For the database I'm using HeidiSql so you should have this tool too.
+There is an "application.properties file" in the resource folder, you should go there and change the "username" and "password" to your personal settings which HeidiSql is using,
+so Spring can create a database for you.
+Enough with the setting.
+After you connected successfully to the database and "Start" the application. Open you favorite browser, I prefer Chrome.
+Type "http://localhost:8000/" in the searching section, press "Enter" and the "home page" of the app should appear on your screen.
+There is a navigation bar at the top with 3 links on it the first which is "Event Manager" links to the "home page",
+the second which is the "Create event" links to the creation of an event, the third which is the "Show all Events" links to list with events.
+ When you click on "Create event", a form displays where you can create an event after typing the data in the form and clicking the button "Create"
+ your event will be saved in to the database, and the page will redirect to show your saved event.
+If you forgot a filed empty it won't create the event and will tell you where is your mistake. 
+In the "List section", which displays after clicking on the link at the navigation or creating an event, you can edit and delete the event.
+After clicking the edit button you will see a form with the name and the location of the event.
+If you want you can edit the event and after clicking the "Edit" button the event will be saved in the database.
+That is all hope you like it.
