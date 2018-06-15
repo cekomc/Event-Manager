@@ -1,0 +1,70 @@
+<div class="container-fluid" xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:th="http://www.thymeleaf.org">
+    <div class="row justify-content-center">
+        <div class="form-holder text-center">
+            <form class="form-inline" action="/create-event" method="POST" th:object="${eventInput}">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2 text-black" for="name">Event Name</label>
+                        <div class="controls">
+                            <input type="text" th:field="*{name}" th:value="${eventInput.getName()}"
+                                   id="name" name="name" placeholder="" class="input-xlarge">
+                            <div class="error">
+                                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+                                </td>
+                                <td th:text="${errorMsg}">
+                                </td>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2 text-black" for="location">Location</label>
+                        <div class="controls">
+                            <input type="text" th:field="*{location}" th:value="${eventInput.getLocation()}" id="location"
+                                   name="location" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                        <div class="error">
+                            <td th:if="${#fields.hasErrors('location')}" th:errors="*{location}">
+                            </td>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2 text-black" for="startDate">Start Date</label>
+                        <div class="controls">
+                            <input type="datetime-local" th:field="*{startDate}" th:value="${eventInput.getStartDate()}" id="startDate"
+                                   name="startDate" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                        <div class="error">
+                            <td th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}">
+                            </td>
+                        </div>
+                    </div>
+                    <br/> <br/>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2 text-black" for="endDate">End Date</label>
+                        <div class="controls">
+                            <input type="datetime-local" th:field="*{endDate}" th:value="${eventInput.getEndDate()}" id="endDate"
+                                   name="endDate" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                        <div class="error">
+                            <td th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}">
+                            </td>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-info">Create</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
